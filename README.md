@@ -21,4 +21,4 @@ Speaking of updates here's the future 🕳:
 
 This app registers with macOS to be run on login, and can be configured in `System Preferences > Users and Groups > Your User > Login Items`.
 
-This app requires OS X Catalina or later to be run.
+This app requires OS X Catalina or later to be run. _(And can't be run on Apple Silicon)_
