@@ -3,18 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151DCDDF24D63385005DFD9E /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DCDDE24D63385005DFD9E /* TextEditor.swift */; };
+		155BBD2024E4EBA70049AE62 /* Sayings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155BBD1F24E4EBA70049AE62 /* Sayings.swift */; };
+		1565F13124D78A5400D948DC /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565F13024D78A5400D948DC /* Tooltip.swift */; };
+		1565F13324D7981000D948DC /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565F13224D7981000D948DC /* WelcomeView.swift */; };
+		158B03B424D78017000BFD3A /* OAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B324D78017000BFD3A /* OAuthToken.swift */; };
+		158B03B624D784C8000BFD3A /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B524D784C8000BFD3A /* PreferencesView.swift */; };
+		158B03B824D78851000BFD3A /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B724D78851000BFD3A /* PreferencesWindowController.swift */; };
+		159F235024EAFEB500B8F591 /* SharedFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F234F24EAFEB500B8F591 /* SharedFileList.m */; };
+		15CC6E8F24D64940000F5F43 /* SKWebAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 15CC6E8E24D64940000F5F43 /* SKWebAPI */; };
+		15CC6E9124D64E0C000F5F43 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC6E9024D64E0C000F5F43 /* UserData.swift */; };
 		15EF22F024D3A2CD00E275E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */; };
 		15EF22F224D3A2CD00E275E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF22F124D3A2CD00E275E6 /* ContentView.swift */; };
 		15EF22F424D3A2D400E275E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EF22F324D3A2D400E275E6 /* Assets.xcassets */; };
 		15EF22F724D3A2D400E275E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EF22F624D3A2D400E275E6 /* Preview Assets.xcassets */; };
 		15EF22FA24D3A2D400E275E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EF22F824D3A2D400E275E6 /* Main.storyboard */; };
+		15EF230324D3AAC200E275E6 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF230224D3AAC200E275E6 /* Update.swift */; };
+		15FEA5C624D4F58F00291CFD /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FEA5C524D4F58F00291CFD /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1539958824E5FF1B00C493EE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		151DCDDE24D63385005DFD9E /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
+		155BBD1F24E4EBA70049AE62 /* Sayings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sayings.swift; path = Scrapple/Sayings.swift; sourceTree = SOURCE_ROOT; };
+		1565F13024D78A5400D948DC /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
+		1565F13224D7981000D948DC /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		158B03B324D78017000BFD3A /* OAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthToken.swift; sourceTree = "<group>"; };
+		158B03B524D784C8000BFD3A /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		158B03B724D78851000BFD3A /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		159F234D24EAFE6F00B8F591 /* SharedFileList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedFileList.h; sourceTree = "<group>"; };
+		159F234E24EAFEB400B8F591 /* Scrapple-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scrapple-Bridging-Header.h"; sourceTree = "<group>"; };
+		159F234F24EAFEB500B8F591 /* SharedFileList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedFileList.m; sourceTree = "<group>"; };
+		15CC6E9024D64E0C000F5F43 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		15EF22EC24D3A2CD00E275E6 /* Scrapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15EF22F124D3A2CD00E275E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +59,8 @@
 		15EF22F924D3A2D400E275E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15EF22FB24D3A2D400E275E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15EF22FC24D3A2D400E275E6 /* Scrapple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scrapple.entitlements; sourceTree = "<group>"; };
+		15EF230224D3AAC200E275E6 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		15FEA5C524D4F58F00291CFD /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +68,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15CC6E8F24D64940000F5F43 /* SKWebAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151DCDE924D647D8005DFD9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		159F235124EAFED900B8F591 /* Auto Launch */ = {
+			isa = PBXGroup;
+			children = (
+				159F234D24EAFE6F00B8F591 /* SharedFileList.h */,
+				159F234F24EAFEB500B8F591 /* SharedFileList.m */,
+			);
+			path = "Auto Launch";
+			sourceTree = "<group>";
+		};
 		15EF22E324D3A2CD00E275E6 = {
 			isa = PBXGroup;
 			children = (
 				15EF22EE24D3A2CD00E275E6 /* Scrapple */,
 				15EF22ED24D3A2CD00E275E6 /* Products */,
+				151DCDE924D647D8005DFD9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +112,24 @@
 			isa = PBXGroup;
 			children = (
 				15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */,
+				159F235124EAFED900B8F591 /* Auto Launch */,
 				15EF22F124D3A2CD00E275E6 /* ContentView.swift */,
+				158B03B524D784C8000BFD3A /* PreferencesView.swift */,
+				1565F13224D7981000D948DC /* WelcomeView.swift */,
+				15FEA5C524D4F58F00291CFD /* ActivityIndicator.swift */,
+				151DCDDE24D63385005DFD9E /* TextEditor.swift */,
+				158B03B724D78851000BFD3A /* PreferencesWindowController.swift */,
+				1565F13024D78A5400D948DC /* Tooltip.swift */,
 				15EF22F324D3A2D400E275E6 /* Assets.xcassets */,
 				15EF22F824D3A2D400E275E6 /* Main.storyboard */,
 				15EF22FB24D3A2D400E275E6 /* Info.plist */,
 				15EF22FC24D3A2D400E275E6 /* Scrapple.entitlements */,
 				15EF22F524D3A2D400E275E6 /* Preview Content */,
+				15EF230224D3AAC200E275E6 /* Update.swift */,
+				15CC6E9024D64E0C000F5F43 /* UserData.swift */,
+				158B03B324D78017000BFD3A /* OAuthToken.swift */,
+				155BBD1F24E4EBA70049AE62 /* Sayings.swift */,
+				159F234E24EAFEB400B8F591 /* Scrapple-Bridging-Header.h */,
 			);
 			path = Scrapple;
 			sourceTree = "<group>";
@@ -84,12 +152,16 @@
 				15EF22E824D3A2CD00E275E6 /* Sources */,
 				15EF22E924D3A2CD00E275E6 /* Frameworks */,
 				15EF22EA24D3A2CD00E275E6 /* Resources */,
+				1539958824E5FF1B00C493EE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Scrapple;
+			packageProductDependencies = (
+				15CC6E8E24D64940000F5F43 /* SKWebAPI */,
+			);
 			productName = Scrapple;
 			productReference = 15EF22EC24D3A2CD00E275E6 /* Scrapple.app */;
 			productType = "com.apple.product-type.application";
@@ -100,12 +172,13 @@
 		15EF22E424D3A2CD00E275E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Linus Skucas";
 				TargetAttributes = {
 					15EF22EB24D3A2CD00E275E6 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -118,6 +191,9 @@
 				Base,
 			);
 			mainGroup = 15EF22E324D3A2CD00E275E6;
+			packageReferences = (
+				151DCDE024D6424D005DFD9E /* XCRemoteSwiftPackageReference "SlackKit" */,
+			);
 			productRefGroup = 15EF22ED24D3A2CD00E275E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,8 +221,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158B03B424D78017000BFD3A /* OAuthToken.swift in Sources */,
+				159F235024EAFEB500B8F591 /* SharedFileList.m in Sources */,
+				158B03B624D784C8000BFD3A /* PreferencesView.swift in Sources */,
+				15CC6E9124D64E0C000F5F43 /* UserData.swift in Sources */,
+				15FEA5C624D4F58F00291CFD /* ActivityIndicator.swift in Sources */,
+				15EF230324D3AAC200E275E6 /* Update.swift in Sources */,
+				151DCDDF24D63385005DFD9E /* TextEditor.swift in Sources */,
+				155BBD2024E4EBA70049AE62 /* Sayings.swift in Sources */,
+				1565F13324D7981000D948DC /* WelcomeView.swift in Sources */,
+				158B03B824D78851000BFD3A /* PreferencesWindowController.swift in Sources */,
 				15EF22F224D3A2CD00E275E6 /* ContentView.swift in Sources */,
 				15EF22F024D3A2CD00E275E6 /* AppDelegate.swift in Sources */,
+				1565F13124D78A5400D948DC /* Tooltip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +277,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -250,6 +338,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -280,14 +369,21 @@
 		15EF230024D3A2D400E275E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Scrapple/Scrapple.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Scrapple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -296,6 +392,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Scrapple-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -303,14 +401,21 @@
 		15EF230124D3A2D400E275E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Scrapple/Scrapple.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Scrapple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -319,6 +424,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Scrapple-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -345,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		151DCDE024D6424D005DFD9E /* XCRemoteSwiftPackageReference "SlackKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvzig/SlackKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15CC6E8E24D64940000F5F43 /* SKWebAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 151DCDE024D6424D005DFD9E /* XCRemoteSwiftPackageReference "SlackKit" */;
+			productName = SKWebAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15EF22E424D3A2CD00E275E6 /* Project object */;
 }
