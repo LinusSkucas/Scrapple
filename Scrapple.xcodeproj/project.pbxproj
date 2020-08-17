@@ -21,8 +21,10 @@
 		15EF22F224D3A2CD00E275E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF22F124D3A2CD00E275E6 /* ContentView.swift */; };
 		15EF22F424D3A2D400E275E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EF22F324D3A2D400E275E6 /* Assets.xcassets */; };
 		15EF22F724D3A2D400E275E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EF22F624D3A2D400E275E6 /* Preview Assets.xcassets */; };
-		15EF22FA24D3A2D400E275E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EF22F824D3A2D400E275E6 /* Main.storyboard */; };
 		15EF230324D3AAC200E275E6 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF230224D3AAC200E275E6 /* Update.swift */; };
+		15F9446624EB089100713A3D /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F9446524EB089100713A3D /* Sparkle.framework */; };
+		15F9446824EB093A00713A3D /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 15F9446524EB089100713A3D /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15F9446A24EB09DC00713A3D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F9446924EB09DC00713A3D /* MainMenu.xib */; };
 		15FEA5C624D4F58F00291CFD /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FEA5C524D4F58F00291CFD /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,16 @@
 			files = (
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F9446724EB092000713A3D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				15F9446824EB093A00713A3D /* Sparkle.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -56,10 +68,11 @@
 		15EF22F124D3A2CD00E275E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15EF22F324D3A2D400E275E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15EF22F624D3A2D400E275E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		15EF22F924D3A2D400E275E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15EF22FB24D3A2D400E275E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15EF22FC24D3A2D400E275E6 /* Scrapple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scrapple.entitlements; sourceTree = "<group>"; };
 		15EF230224D3AAC200E275E6 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		15F9446524EB089100713A3D /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		15F9446924EB09DC00713A3D /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		15FEA5C524D4F58F00291CFD /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15CC6E8F24D64940000F5F43 /* SKWebAPI in Frameworks */,
+				15F9446624EB089100713A3D /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,7 @@
 		151DCDE924D647D8005DFD9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15F9446524EB089100713A3D /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +136,7 @@
 				158B03B724D78851000BFD3A /* PreferencesWindowController.swift */,
 				1565F13024D78A5400D948DC /* Tooltip.swift */,
 				15EF22F324D3A2D400E275E6 /* Assets.xcassets */,
-				15EF22F824D3A2D400E275E6 /* Main.storyboard */,
+				15F9446924EB09DC00713A3D /* MainMenu.xib */,
 				15EF22FB24D3A2D400E275E6 /* Info.plist */,
 				15EF22FC24D3A2D400E275E6 /* Scrapple.entitlements */,
 				15EF22F524D3A2D400E275E6 /* Preview Content */,
@@ -153,6 +168,7 @@
 				15EF22E924D3A2CD00E275E6 /* Frameworks */,
 				15EF22EA24D3A2CD00E275E6 /* Resources */,
 				1539958824E5FF1B00C493EE /* Embed App Extensions */,
+				15F9446724EB092000713A3D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -208,9 +224,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15EF22FA24D3A2D400E275E6 /* Main.storyboard in Resources */,
 				15EF22F724D3A2D400E275E6 /* Preview Assets.xcassets in Resources */,
 				15EF22F424D3A2D400E275E6 /* Assets.xcassets in Resources */,
+				15F9446A24EB09DC00713A3D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,17 +254,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		15EF22F824D3A2D400E275E6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15EF22F924D3A2D400E275E6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		15EF22FD24D3A2D400E275E6 /* Debug */ = {
@@ -387,7 +392,7 @@
 				INFOPLIST_FILE = Scrapple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
@@ -419,7 +424,7 @@
 				INFOPLIST_FILE = Scrapple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
