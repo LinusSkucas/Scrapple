@@ -1,5 +1,5 @@
 # ![Scrapple app icon](https://raw.githubusercontent.com/LinusS1/Scrapple/master/Scrapple/Assets.xcassets/AppIcon.appiconset/scrapbook%201%20copy%204.png) Scrapple
-Post scrappy updates from your Mac!
+Post scrappy updates from your Mac! [Download now](https://github.com/LinusS1/Scrapple/releases)
 
 Using Scrapple, you are able to post scrapbook updates right from your menu bar!
 
