@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		151DCDDF24D63385005DFD9E /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DCDDE24D63385005DFD9E /* TextEditor.swift */; };
+		154488B624EB558400A89C9A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154488B524EB558400A89C9A /* Sparkle.framework */; };
+		154488B724EB558C00A89C9A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 154488B524EB558400A89C9A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		155BBD2024E4EBA70049AE62 /* Sayings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155BBD1F24E4EBA70049AE62 /* Sayings.swift */; };
 		1565F13124D78A5400D948DC /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565F13024D78A5400D948DC /* Tooltip.swift */; };
 		1565F13324D7981000D948DC /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565F13224D7981000D948DC /* WelcomeView.swift */; };
@@ -37,10 +39,21 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		154488B324EB528800A89C9A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				154488B724EB558C00A89C9A /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		151DCDDE24D63385005DFD9E /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
+		154488B524EB558400A89C9A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		155BBD1F24E4EBA70049AE62 /* Sayings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sayings.swift; path = Scrapple/Sayings.swift; sourceTree = SOURCE_ROOT; };
 		1565F13024D78A5400D948DC /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 		1565F13224D7981000D948DC /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -69,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15CC6E8F24D64940000F5F43 /* SKWebAPI in Frameworks */,
+				154488B624EB558400A89C9A /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,7 @@
 		151DCDE924D647D8005DFD9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				154488B524EB558400A89C9A /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,6 +168,7 @@
 				15EF22E924D3A2CD00E275E6 /* Frameworks */,
 				15EF22EA24D3A2CD00E275E6 /* Resources */,
 				1539958824E5FF1B00C493EE /* Embed App Extensions */,
+				154488B324EB528800A89C9A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -376,6 +392,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -387,7 +404,7 @@
 				INFOPLIST_FILE = Scrapple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
@@ -408,6 +425,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -419,7 +437,7 @@
 				INFOPLIST_FILE = Scrapple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
