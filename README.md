@@ -22,3 +22,16 @@ Speaking of updates here's the future 🕳:
 This app registers with macOS to be run on login, and can be configured in `System Preferences > Users and Groups > Your User > Login Items`.
 
 This app requires OS X Catalina or later to be run. _(And can't be run on Apple Silicon)_
+
+## 🚀 Install
+
+### 📦 Zip file
+
+1. Download the zip file from the [releases page](https://github.com/Matt-Gleich/Scrapple/releases)
+2. Extract the app from the zip file
+3. Drag the app to your `Applications` folder
+
+### 🍻 Homebrew cask
+
+1. Run `brew tap LinusS1/homebrew-tap`
+2. Run `brew cask install scrapple`
