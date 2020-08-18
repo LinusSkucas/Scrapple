@@ -27,7 +27,7 @@ This app requires OS X Catalina or later to be run. _(And can't be run on Apple 
 
 ### 📦 Zip file
 
-1. Download the zip file from the [releases page](https://github.com/Matt-Gleich/Scrapple/releases)
+1. Download the zip file from the [releases page](https://github.com/LinusS1/Scrapple/releases)
 2. Extract the app from the zip file
 3. Drag the app to your `Applications` folder
 
