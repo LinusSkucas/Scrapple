@@ -11,24 +11,49 @@ import SwiftUI
 struct PreferencesView: View {
     @EnvironmentObject var userData: UserData
     @State var authShow: Bool = false
+    @State var quitButtonText = QuitScrappleSaying.status
     var body: some View {
         VStack(alignment: .leading) {
-//            HStack {
-//                Text("Hack Club Slack Account")
-//                Button("Auth", action: {
-//                    self.authShow.toggle()
-//                })
-//            }
-            VStack(alignment: .leading, spacing: 0.0) {
-                    Toggle(isOn: self.$userData.notificationOnFinished) {
-                        Text("Send notification when finished sending to Scrappy")
+            GroupBox {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Hack Club Account ")
+                        Spacer()
+                        Button("Reconnect...") {
+                            OAuthToken.shared.deleteFromKeychain()
+                            self.authShow = true
+                        }
                     }
+                }
+                .padding()
+            }
+            .frame(height: 100)
+//            .padding(.bottom)
+            VStack(alignment: .leading, spacing: 0.0) {
+                Toggle(isOn: self.$userData.notificationOnFinished) {
+                    Text("Send notification when finished sending to Scrappy")
+                }
                 Text("It's recommended you keep this on, so you know you \nhave posted.")
                     .font(.caption)
                     .fontWeight(.light)
                     .foregroundColor(.secondary)
                     .lineLimit(2)
             }
+            HStack {
+                Spacer()
+                Button(action: {
+                    NSApplication.shared.terminate(nil)
+                }, label: {
+                    Text(quitButtonText)
+                })
+                .buttonStyle(BorderlessButtonStyle())
+            }.onHover(perform: { hovering in
+                if hovering {
+                    self.quitButtonText = QuitScrappleSaying.sayings.randomElement()!
+                } else {
+                    self.quitButtonText = QuitScrappleSaying.status
+                }
+            })
 //            Toggle(isOn: self.$userData.runOnLogin) {
 //                Text("Run on Login")
 //            }

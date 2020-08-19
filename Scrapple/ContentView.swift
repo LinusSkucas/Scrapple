@@ -24,6 +24,7 @@ struct ContentView: View {
                     controller.window?.title = "Preferences"
                     controller.showWindow(nil)
                     controller.window?.becomeFirstResponder()
+                    NSApp.activate(ignoringOtherApps: true)
                 }) {
                     Image(nsImage: NSImage(named: NSImage.actionTemplateName)!)
                     }.toolTip("Preferences").buttonStyle(BorderlessButtonStyle())
@@ -36,10 +37,10 @@ struct ContentView: View {
                     Button("Choose File...", action: { self.openFile() })
                         .disabled(self.draftText == "")
                 }
-                Text("You can also \"share\" files with Scrapple to post them.")
-                    .font(.caption)
-                    .fontWeight(.light)
-                    .foregroundColor(.secondary)
+//                Text("You can also \"share\" files with Scrapple to post them.")
+//                    .font(.caption)
+//                    .fontWeight(.light)
+//                    .foregroundColor(.secondary)
             }
         }
         .padding()

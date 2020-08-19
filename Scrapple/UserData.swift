@@ -8,6 +8,7 @@
 
 import Foundation
 import UserNotifications
+import SKWebAPI
 
 class UserData: ObservableObject {
     @Published var runOnLogin: Bool = false // if true change
@@ -17,6 +18,14 @@ class UserData: ObservableObject {
     @Published var shouldRemind = false
     @Published var remindTime = Date()
     @Published var oauthToken: OAuthToken? = OAuthToken.shared
+//    var scrapbookUsername: String? {
+//        let webAPI = WebAPI(token: UserData.shared.oauthToken!.oauthToken!)
+//
+//    }
+    
+    var lastUpdatedVersionBuild: String? = UserDefaults.standard.string(forKey: "lastUpdatedVersionBuild") {
+        didSet { UserDefaults.standard.setValue(self.lastUpdatedVersionBuild, forKey: "lastUpdatedVersionBuild") }
+    }
     
     static var shared = UserData()
     

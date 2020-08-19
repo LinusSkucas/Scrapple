@@ -40,6 +40,13 @@ struct OAuthToken {
         let status = SecItemAdd(query as CFDictionary, nil)
         guard status == errSecSuccess else { throw KeychainError.unhandledError(status: status)}
     }
+    
+    func deleteFromKeychain() {
+        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+                                    kSecAttrAccount as String: Self.keychainAccount,
+                                    kSecMatchLimit as String: kSecMatchLimitOne]
+        SecItemDelete(query as CFDictionary)
+    }
 
 }
 

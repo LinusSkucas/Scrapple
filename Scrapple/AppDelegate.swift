@@ -47,8 +47,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
              button.action = #selector(togglePopover(_:))
         }
         UNUserNotificationCenter.current().delegate = self
-        
-        
+        if (UserData.shared.lastUpdatedVersionBuild != NSApplication.appBuild) && UserData.shared.lastUpdatedVersionBuild != nil {
+//             Preform updates and migration
+            
+        }
+        UserData.shared.lastUpdatedVersionBuild = NSApplication.appBuild!
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {

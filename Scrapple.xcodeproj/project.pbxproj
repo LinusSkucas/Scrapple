@@ -19,6 +19,7 @@
 		159F235024EAFEB500B8F591 /* SharedFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F234F24EAFEB500B8F591 /* SharedFileList.m */; };
 		15CC6E8F24D64940000F5F43 /* SKWebAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 15CC6E8E24D64940000F5F43 /* SKWebAPI */; };
 		15CC6E9124D64E0C000F5F43 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC6E9024D64E0C000F5F43 /* UserData.swift */; };
+		15E2DBA724EC4D8A0087CE3D /* NSApplication+AppBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2DBA624EC4D8A0087CE3D /* NSApplication+AppBuild.swift */; };
 		15EF22F024D3A2CD00E275E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */; };
 		15EF22F224D3A2CD00E275E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF22F124D3A2CD00E275E6 /* ContentView.swift */; };
 		15EF22F424D3A2D400E275E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EF22F324D3A2D400E275E6 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		159F234E24EAFEB400B8F591 /* Scrapple-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scrapple-Bridging-Header.h"; sourceTree = "<group>"; };
 		159F234F24EAFEB500B8F591 /* SharedFileList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedFileList.m; sourceTree = "<group>"; };
 		15CC6E9024D64E0C000F5F43 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		15E2DBA624EC4D8A0087CE3D /* NSApplication+AppBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSApplication+AppBuild.swift"; sourceTree = "<group>"; };
 		15EF22EC24D3A2CD00E275E6 /* Scrapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15EF22F124D3A2CD00E275E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				158B03B324D78017000BFD3A /* OAuthToken.swift */,
 				155BBD1F24E4EBA70049AE62 /* Sayings.swift */,
 				159F234E24EAFEB400B8F591 /* Scrapple-Bridging-Header.h */,
+				15E2DBA624EC4D8A0087CE3D /* NSApplication+AppBuild.swift */,
 			);
 			path = Scrapple;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				158B03B624D784C8000BFD3A /* PreferencesView.swift in Sources */,
 				15CC6E9124D64E0C000F5F43 /* UserData.swift in Sources */,
 				15FEA5C624D4F58F00291CFD /* ActivityIndicator.swift in Sources */,
+				15E2DBA724EC4D8A0087CE3D /* NSApplication+AppBuild.swift in Sources */,
 				15EF230324D3AAC200E275E6 /* Update.swift in Sources */,
 				151DCDDF24D63385005DFD9E /* TextEditor.swift in Sources */,
 				155BBD2024E4EBA70049AE62 /* Sayings.swift in Sources */,
@@ -392,7 +396,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -409,6 +413,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Scrapple-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -425,7 +430,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
