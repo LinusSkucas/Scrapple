@@ -131,7 +131,7 @@ func sendRequest(code: String) {
         }
         else {
             // Failure
-            fatalError()
+            UserData.shared.sendNotification(title: "Authorization failed", subtitle: "We were unable to authorize you with Slack", time: nil, interval: nil)
         }
     })
     task.resume()
