@@ -39,6 +39,15 @@ struct PreferencesView: View {
                     .foregroundColor(.secondary)
                     .lineLimit(2)
             }
+            Toggle(isOn: self.$userData.runOnLogin) {
+                Text("Run on Login")
+            }
+//            Toggle(isOn: self.$userData.shouldRemind) {
+//                Text("Get a reminder to post on your Scrapbook.")
+//            }
+//            if self.userData.shouldRemind {
+//                DatePicker("Notification time", selection: self.$userData.remindTime, displayedComponents: .hourAndMinute)
+//            }
             HStack {
                 Spacer()
                 Button(action: {
@@ -54,15 +63,6 @@ struct PreferencesView: View {
                     self.quitButtonText = QuitScrappleSaying.status
                 }
             })
-//            Toggle(isOn: self.$userData.runOnLogin) {
-//                Text("Run on Login")
-//            }
-//            Toggle(isOn: self.$userData.shouldRemind) {
-//                Text("Get a reminder to post on your Scrapbook.")
-//            }
-//            if self.userData.shouldRemind {
-//                DatePicker("Notification time", selection: self.$userData.remindTime, displayedComponents: .hourAndMinute)
-//            }
         }
         .sheet(isPresented: self.$authShow, content: {
             WelcomeView()

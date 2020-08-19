@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
     var popover: NSPopover!
     var statusBarItem: NSStatusItem!
-    private var appURL: URL { Bundle.main.bundleURL }
+    static var appURL: URL { Bundle.main.bundleURL }
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -32,7 +32,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             controller.window?.makeKeyAndOrderFront(nil)
             NSApp.activate(ignoringOtherApps: true)
         }
-        SharedFileList.sessionLoginItems().addItem(appURL)
         let contentView = ContentView().environmentObject(UserData.shared)
 
         let popover = NSPopover()
@@ -124,10 +123,10 @@ func sendRequest(code: String) {
     let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
         if (error == nil) {
             let token = String(bytes: data!, encoding: .utf8)!
-//            DispatchQueue.main.async {
+            DispatchQueue.main.async {
                 NotificationCenter.default.post(name: Notification.Name("GotToken"), object: nil, userInfo: ["token": token])
                 try! OAuthToken.shared.addToKeychain(name: "Scrapple Hack Club Account", token: token)
-//            }
+            }
         }
         else {
             // Failure

@@ -22,7 +22,7 @@ struct WelcomeView: View {
                 .font(.title)
                 .fontWeight(.medium)
             Spacer()
-            Text("Connect your slack account to get started")
+            Text("Connect your Slack account to get started")
             HStack {
                 Button("Connect...") {
                     self.isConnecting = true
@@ -34,6 +34,7 @@ struct WelcomeView: View {
             }
             .onReceive(NotificationCenter.default.publisher(for: Notification.Name("GotToken")), perform: {output in
                 DispatchQueue.main.async {
+                    UserData.shared.runOnLogin = true
                     self.presentationMode.wrappedValue.dismiss()
                 }
             })

@@ -7,14 +7,22 @@
 //
 
 import Foundation
-import UserNotifications
 import SKWebAPI
+import UserNotifications
 
 class UserData: ObservableObject {
-    @Published var runOnLogin: Bool = false // if true change
-    @Published var notificationOnFinished = UserDefaults.standard.bool(forKey: "notificationOnFinished") {
-        didSet { UserDefaults.standard.setValue(self.notificationOnFinished, forKey: "notificationOnFinished") }
+    @Published var runOnLogin: Bool = SharedFileList.sessionLoginItems().containsItem(AppDelegate.appURL) {
+        didSet { if runOnLogin {
+            SharedFileList.sessionLoginItems().addItem(AppDelegate.appURL)
+        } else {
+            SharedFileList.sessionLoginItems().removeItem(AppDelegate.appURL)
+        }}
     }
+
+    @Published var notificationOnFinished = UserDefaults.standard.bool(forKey: "notificationOnFinished") {
+        didSet { UserDefaults.standard.setValue(notificationOnFinished, forKey: "notificationOnFinished") }
+    }
+
     @Published var shouldRemind = false
     @Published var remindTime = Date()
     @Published var oauthToken: OAuthToken? = OAuthToken.shared
@@ -22,16 +30,16 @@ class UserData: ObservableObject {
 //        let webAPI = WebAPI(token: UserData.shared.oauthToken!.oauthToken!)
 //
 //    }
-    
+
     var lastUpdatedVersionBuild: String? = UserDefaults.standard.string(forKey: "lastUpdatedVersionBuild") {
-        didSet { UserDefaults.standard.setValue(self.lastUpdatedVersionBuild, forKey: "lastUpdatedVersionBuild") }
+        didSet { UserDefaults.standard.setValue(lastUpdatedVersionBuild, forKey: "lastUpdatedVersionBuild") }
     }
-    
+
     static var shared = UserData()
-    
+
     func sendNotification(title: String, subtitle: String, time: Date?, interval: DateComponents?) {
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.sound, .alert]) { (granted, error) in
+        center.requestAuthorization(options: [.sound, .alert]) { granted, error in
             if let error = error {
                 print(error)
                 return
@@ -42,7 +50,7 @@ class UserData: ObservableObject {
             content.subtitle = subtitle
             let uuidString = UUID().uuidString
             let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: nil)
-            center.add(request) { (error) in
+            center.add(request) { error in
                 if error != nil {
                     print(error as Any)
                     return
@@ -51,6 +59,3 @@ class UserData: ObservableObject {
         }
     }
 }
-
-
-
