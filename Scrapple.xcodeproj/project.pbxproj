@@ -55,7 +55,7 @@
 /* Begin PBXFileReference section */
 		151DCDDE24D63385005DFD9E /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		154488B524EB558400A89C9A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		155BBD1F24E4EBA70049AE62 /* Sayings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sayings.swift; path = Scrapple/Sayings.swift; sourceTree = SOURCE_ROOT; };
+		155BBD1F24E4EBA70049AE62 /* Sayings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sayings.swift; path = Scrapple/Models/Sayings.swift; sourceTree = SOURCE_ROOT; };
 		1565F13024D78A5400D948DC /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 		1565F13224D7981000D948DC /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		158B03B324D78017000BFD3A /* OAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthToken.swift; sourceTree = "<group>"; };
@@ -99,13 +99,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		159F235124EAFED900B8F591 /* Auto Launch */ = {
+		15CC74A524ECE04D0005DCDE /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */,
 				159F234D24EAFE6F00B8F591 /* SharedFileList.h */,
 				159F234F24EAFEB500B8F591 /* SharedFileList.m */,
 			);
-			path = "Auto Launch";
+			path = Support;
+			sourceTree = "<group>";
+		};
+		15CC74A624ECE0760005DCDE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15EF22F124D3A2CD00E275E6 /* ContentView.swift */,
+				158B03B524D784C8000BFD3A /* PreferencesView.swift */,
+				1565F13224D7981000D948DC /* WelcomeView.swift */,
+				15CC74A724ECE0910005DCDE /* Support Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15CC74A724ECE0910005DCDE /* Support Views */ = {
+			isa = PBXGroup;
+			children = (
+				15FEA5C524D4F58F00291CFD /* ActivityIndicator.swift */,
+				151DCDDE24D63385005DFD9E /* TextEditor.swift */,
+				158B03B724D78851000BFD3A /* PreferencesWindowController.swift */,
+				1565F13024D78A5400D948DC /* Tooltip.swift */,
+			);
+			path = "Support Views";
+			sourceTree = "<group>";
+		};
+		15CC74A824ECE0C80005DCDE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15E2DBA624EC4D8A0087CE3D /* NSApplication+AppBuild.swift */,
+				159F234E24EAFEB400B8F591 /* Scrapple-Bridging-Header.h */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15CC74A924ECE1020005DCDE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				15EF230224D3AAC200E275E6 /* Update.swift */,
+				15CC6E9024D64E0C000F5F43 /* UserData.swift */,
+				158B03B324D78017000BFD3A /* OAuthToken.swift */,
+				155BBD1F24E4EBA70049AE62 /* Sayings.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		15EF22E324D3A2CD00E275E6 = {
@@ -128,26 +171,15 @@
 		15EF22EE24D3A2CD00E275E6 /* Scrapple */ = {
 			isa = PBXGroup;
 			children = (
-				15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */,
-				159F235124EAFED900B8F591 /* Auto Launch */,
-				15EF22F124D3A2CD00E275E6 /* ContentView.swift */,
-				158B03B524D784C8000BFD3A /* PreferencesView.swift */,
-				1565F13224D7981000D948DC /* WelcomeView.swift */,
-				15FEA5C524D4F58F00291CFD /* ActivityIndicator.swift */,
-				151DCDDE24D63385005DFD9E /* TextEditor.swift */,
-				158B03B724D78851000BFD3A /* PreferencesWindowController.swift */,
-				1565F13024D78A5400D948DC /* Tooltip.swift */,
+				15CC74A524ECE04D0005DCDE /* Support */,
+				15CC74A624ECE0760005DCDE /* Views */,
 				15EF22F324D3A2D400E275E6 /* Assets.xcassets */,
 				15EF22F824D3A2D400E275E6 /* Main.storyboard */,
 				15EF22FB24D3A2D400E275E6 /* Info.plist */,
 				15EF22FC24D3A2D400E275E6 /* Scrapple.entitlements */,
 				15EF22F524D3A2D400E275E6 /* Preview Content */,
-				15EF230224D3AAC200E275E6 /* Update.swift */,
-				15CC6E9024D64E0C000F5F43 /* UserData.swift */,
-				158B03B324D78017000BFD3A /* OAuthToken.swift */,
-				155BBD1F24E4EBA70049AE62 /* Sayings.swift */,
-				159F234E24EAFEB400B8F591 /* Scrapple-Bridging-Header.h */,
-				15E2DBA624EC4D8A0087CE3D /* NSApplication+AppBuild.swift */,
+				15CC74A924ECE1020005DCDE /* Models */,
+				15CC74A824ECE0C80005DCDE /* Extensions */,
 			);
 			path = Scrapple;
 			sourceTree = "<group>";
@@ -415,7 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Scrapple-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Extensions/Scrapple-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -450,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Scrapple-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Extensions/Scrapple-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
