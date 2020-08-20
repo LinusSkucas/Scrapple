@@ -56,7 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DFRSystemModalShowsCloseBoxWhenFrontMost(true)
         let kPandaIdentifier = NSTouchBarItem.Identifier(rawValue: "panda")
         let panda = NSCustomTouchBarItem.init(identifier: kPandaIdentifier)
-        panda.view = NSButton(title: "📖", target: self, action: #selector(openPostWindow))
+        panda.view = NSButton(image: NSImage(named: NSImage.Name("AppIcon"))!, target: self, action: #selector(openPostWindow))
         NSTouchBarItem.addSystemTrayItem(panda)
         DFRElementSetControlStripPresenceForIdentifier(kPandaIdentifier, true)
     }
