@@ -10,24 +10,30 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var userData: UserData
+    @Environment(\.hostingWindow) var hostingWindow
     @State var draftImage: Data?
     @State var draftText = ""
     @State var isSubmitting = false
+    
+    var isPopover = true
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
             HStack {
                 Text("Write about what you did:")
                 Spacer()
-                Button(action: {
-                    let preferencesView = PreferencesView().environmentObject(self.userData)
-                    let controller = PreferencesWindowController(rootView: preferencesView)
-                    controller.window?.title = "Preferences"
-                    controller.showWindow(nil)
-                    controller.window?.becomeFirstResponder()
-                    NSApp.activate(ignoringOtherApps: true)
-                }) {
-                    Image(nsImage: NSImage(named: NSImage.actionTemplateName)!)
-                    }.toolTip("Preferences").buttonStyle(BorderlessButtonStyle())
+                if isPopover {
+                    Button(action: {
+                        let preferencesView = PreferencesView().environmentObject(self.userData)
+                        let controller = PreferencesWindowController(rootView: preferencesView)
+                        controller.window?.title = "Preferences"
+                        controller.showWindow(nil)
+                        controller.window?.becomeFirstResponder()
+                        NSApp.activate(ignoringOtherApps: true)
+                    }) {
+                        Image(nsImage: NSImage(named: NSImage.actionTemplateName)!)
+                        }.toolTip("Preferences").buttonStyle(BorderlessButtonStyle())
+                }
             }
             MacEditorTextView(text: self.$draftText)
             VStack(alignment: .leading, spacing: 0.0) {
@@ -66,6 +72,9 @@ struct ContentView: View {
                 })
                 self.draftImage = nil
                 self.draftText = ""
+                if !isPopover {
+                    self.hostingWindow()?.close()
+                }
             }
         }
     }

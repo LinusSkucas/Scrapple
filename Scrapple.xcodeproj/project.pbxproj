@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		151DCDDF24D63385005DFD9E /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DCDDE24D63385005DFD9E /* TextEditor.swift */; };
+		151DE82824EEDCF800CFB720 /* EnvironmentKey+NSHostingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DE82724EEDCF800CFB720 /* EnvironmentKey+NSHostingWindow.swift */; };
+		152C9B7B24EED1DE00DC3301 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152C9B7A24EED1DE00DC3301 /* DFRFoundation.framework */; };
 		154488B624EB558400A89C9A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154488B524EB558400A89C9A /* Sparkle.framework */; };
 		154488B724EB558C00A89C9A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 154488B524EB558400A89C9A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		155BBD2024E4EBA70049AE62 /* Sayings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155BBD1F24E4EBA70049AE62 /* Sayings.swift */; };
@@ -54,6 +56,9 @@
 
 /* Begin PBXFileReference section */
 		151DCDDE24D63385005DFD9E /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
+		151DE82624EED4B000CFB720 /* TouchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchBar.h; sourceTree = "<group>"; };
+		151DE82724EEDCF800CFB720 /* EnvironmentKey+NSHostingWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentKey+NSHostingWindow.swift"; sourceTree = "<group>"; };
+		152C9B7A24EED1DE00DC3301 /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		154488B524EB558400A89C9A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		155BBD1F24E4EBA70049AE62 /* Sayings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sayings.swift; path = Scrapple/Models/Sayings.swift; sourceTree = SOURCE_ROOT; };
 		1565F13024D78A5400D948DC /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
@@ -84,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15CC6E8F24D64940000F5F43 /* SKWebAPI in Frameworks */,
+				152C9B7B24EED1DE00DC3301 /* DFRFoundation.framework in Frameworks */,
 				154488B624EB558400A89C9A /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +100,7 @@
 		151DCDE924D647D8005DFD9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				152C9B7A24EED1DE00DC3301 /* DFRFoundation.framework */,
 				154488B524EB558400A89C9A /* Sparkle.framework */,
 			);
 			name = Frameworks;
@@ -105,6 +112,7 @@
 				15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */,
 				159F234D24EAFE6F00B8F591 /* SharedFileList.h */,
 				159F234F24EAFEB500B8F591 /* SharedFileList.m */,
+				151DE82624EED4B000CFB720 /* TouchBar.h */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 			children = (
 				15E2DBA624EC4D8A0087CE3D /* NSApplication+AppBuild.swift */,
 				159F234E24EAFEB400B8F591 /* Scrapple-Bridging-Header.h */,
+				151DE82724EEDCF800CFB720 /* EnvironmentKey+NSHostingWindow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,6 +287,7 @@
 				15CC6E9124D64E0C000F5F43 /* UserData.swift in Sources */,
 				15FEA5C624D4F58F00291CFD /* ActivityIndicator.swift in Sources */,
 				15E2DBA724EC4D8A0087CE3D /* NSApplication+AppBuild.swift in Sources */,
+				151DE82824EEDCF800CFB720 /* EnvironmentKey+NSHostingWindow.swift in Sources */,
 				15EF230324D3AAC200E275E6 /* Update.swift in Sources */,
 				151DCDDF24D63385005DFD9E /* TextEditor.swift in Sources */,
 				155BBD2024E4EBA70049AE62 /* Sayings.swift in Sources */,
@@ -421,14 +431,13 @@
 		15EF230024D3A2D400E275E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Scrapple/Scrapple.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -441,6 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@loader_path/../Frameworks",
+					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.1;
@@ -450,20 +460,23 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Extensions/Scrapple-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
 		15EF230124D3A2D400E275E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Scrapple/Scrapple.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -476,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@loader_path/../Frameworks",
+					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.1;
@@ -484,6 +498,10 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Extensions/Scrapple-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};

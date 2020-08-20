@@ -3,3 +3,4 @@
 //
 
 #import "SharedFileList.h"
+#import "TouchBar.h"

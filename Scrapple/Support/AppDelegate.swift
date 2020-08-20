@@ -51,6 +51,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
         }
         UserData.shared.lastUpdatedVersionBuild = NSApplication.appBuild!
+        
+        // MARK - Touch Bar
+        DFRSystemModalShowsCloseBoxWhenFrontMost(true)
+        let kPandaIdentifier = NSTouchBarItem.Identifier(rawValue: "panda")
+        let panda = NSCustomTouchBarItem.init(identifier: kPandaIdentifier)
+        panda.view = NSButton(title: "📖", target: self, action: #selector(openPostWindow))
+        NSTouchBarItem.addSystemTrayItem(panda)
+        DFRElementSetControlStripPresenceForIdentifier(kPandaIdentifier, true)
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {
@@ -68,6 +76,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let code = url.queryItem("code")
         sendRequest(code: code!)
       }
+    
+    @objc func openPostWindow(sender: NSButton) {
+        window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 400, height: 250),
+            styleMask: [.titled, .closable],
+            backing: .buffered, defer: false)
+        window.isReleasedWhenClosed = false
+        window.center()
+        window.contentView = NSHostingView(rootView: ContentView(isPopover: false).environmentObject(UserData.shared).environment(\.hostingWindow, { [weak window] in
+                                                                                    return window }))
+        window.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
+    }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
@@ -93,7 +114,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 }
 
 func sendRequest(code: String) {
-    /* lol I just copied this from paw. */
+    /* I just copied this from paw ¯\_(ツ)_/¯ */
     /* Configure session, choose between:
        * defaultSessionConfiguration
        * ephemeralSessionConfiguration
