@@ -42,6 +42,16 @@ struct PreferencesView: View {
             Toggle(isOn: self.$userData.runOnLogin) {
                 Text("Run on Login")
             }
+            VStack(alignment: .leading, spacing: 0.0) {
+                Toggle(isOn: self.$userData.showTouchBarButton) {
+                    Text("Access Scrapple from your Touch Bar.")
+                }
+                Text("Restart Scrapple for this to take affect.")
+                    .font(.caption)
+                    .fontWeight(.light)
+                    .foregroundColor(.secondary)
+                    .lineLimit(2)
+            }
 //            Toggle(isOn: self.$userData.shouldRemind) {
 //                Text("Get a reminder to post on your Scrapbook.")
 //            }

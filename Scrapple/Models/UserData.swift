@@ -26,6 +26,9 @@ class UserData: ObservableObject {
     @Published var notificationOnFinished = UserDefaults.standard.bool(forKey: "notificationOnFinished") {
         didSet { UserDefaults.standard.setValue(notificationOnFinished, forKey: "notificationOnFinished") }
     }
+    @Published var showTouchBarButton = UserDefaults.standard.bool(forKey: "showTouchBarButton") {
+        didSet { UserDefaults.standard.setValue(showTouchBarButton, forKey: "showTouchBarButton") }
+    }
 
     @Published var shouldRemind = false
     @Published var remindTime = Date()

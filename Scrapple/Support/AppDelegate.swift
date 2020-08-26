@@ -45,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
              button.action = #selector(togglePopover(_:))
         }
         UNUserNotificationCenter.current().delegate = self
-        if (UserData.shared.lastUpdatedVersionBuild != NSApplication.appBuild) && UserData.shared.lastUpdatedVersionBuild != nil {
+        if (UserData.shared.lastUpdatedVersionBuild != NSApplication.appBuild) || UserData.shared.lastUpdatedVersionBuild == nil {
 //             Preform updates and migration
             
         }
@@ -57,7 +57,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let panda = NSCustomTouchBarItem.init(identifier: kPandaIdentifier)
         panda.view = NSButton(image: NSImage(named: NSImage.Name("AppIcon"))!, target: self, action: #selector(openPostWindow))
         NSTouchBarItem.addSystemTrayItem(panda)
-        DFRElementSetControlStripPresenceForIdentifier(kPandaIdentifier, true)
+        if UserData.shared.showTouchBarButton {
+            DFRElementSetControlStripPresenceForIdentifier(kPandaIdentifier, true)
+        }
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {
