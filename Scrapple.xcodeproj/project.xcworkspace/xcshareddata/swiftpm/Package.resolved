@@ -30,7 +30,7 @@
       },
       {
         "package": "SlackKit",
-        "repositoryURL": "https://github.com/pvzig/SlackKit.git",
+        "repositoryURL": "https://github.com/pvzig/SlackKit",
         "state": {
           "branch": null,
           "revision": "3089435da0c39caebea6037dce2c5bbb660a02b6",

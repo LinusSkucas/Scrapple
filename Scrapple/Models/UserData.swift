@@ -10,12 +10,16 @@ import Foundation
 import SKWebAPI
 import UserNotifications
 
+struct AppBundleURL {
+    static var appURL: URL { Bundle.main.bundleURL }
+}
+
 class UserData: ObservableObject {
-    @Published var runOnLogin: Bool = SharedFileList.sessionLoginItems().containsItem(AppDelegate.appURL) {
+    @Published var runOnLogin: Bool = SharedFileList.sessionLoginItems().containsItem(AppBundleURL.appURL) {
         didSet { if runOnLogin {
-            SharedFileList.sessionLoginItems().addItem(AppDelegate.appURL)
+            SharedFileList.sessionLoginItems().addItem(AppBundleURL.appURL)
         } else {
-            SharedFileList.sessionLoginItems().removeItem(AppDelegate.appURL)
+            SharedFileList.sessionLoginItems().removeItem(AppBundleURL.appURL)
         }}
     }
 

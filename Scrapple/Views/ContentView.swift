@@ -72,7 +72,7 @@ struct ContentView: View {
                 })
                 self.draftImage = nil
                 self.draftText = ""
-                if !isPopover {
+                if !self.isPopover {
                     self.hostingWindow()?.close()
                 }
             }

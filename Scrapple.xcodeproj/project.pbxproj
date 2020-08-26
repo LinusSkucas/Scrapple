@@ -10,6 +10,16 @@
 		151DCDDF24D63385005DFD9E /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DCDDE24D63385005DFD9E /* TextEditor.swift */; };
 		151DE82824EEDCF800CFB720 /* EnvironmentKey+NSHostingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DE82724EEDCF800CFB720 /* EnvironmentKey+NSHostingWindow.swift */; };
 		152C9B7B24EED1DE00DC3301 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152C9B7A24EED1DE00DC3301 /* DFRFoundation.framework */; };
+		152D9EED24F6C17E008E2CFF /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 152D9EEC24F6C17E008E2CFF /* icon.icns */; };
+		152D9EEF24F6C17E008E2CFF /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D9EEE24F6C17E008E2CFF /* ShareViewController.swift */; };
+		152D9EF224F6C17E008E2CFF /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152D9EF024F6C17E008E2CFF /* ShareViewController.xib */; };
+		152D9EF724F6C17E008E2CFF /* ShareToScrapbook.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 152D9EEA24F6C17E008E2CFF /* ShareToScrapbook.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		152D9F1124F6C422008E2CFF /* SKWebAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 152D9F1024F6C422008E2CFF /* SKWebAPI */; };
+		152D9F1224F6C42A008E2CFF /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF230224D3AAC200E275E6 /* Update.swift */; };
+		152D9F1324F6C42A008E2CFF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC6E9024D64E0C000F5F43 /* UserData.swift */; };
+		152D9F1424F6C42A008E2CFF /* OAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B324D78017000BFD3A /* OAuthToken.swift */; };
+		152D9F1524F6C42A008E2CFF /* Sayings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155BBD1F24E4EBA70049AE62 /* Sayings.swift */; };
+		152D9F1724F6C452008E2CFF /* SharedFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F234F24EAFEB500B8F591 /* SharedFileList.m */; };
 		154488B624EB558400A89C9A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154488B524EB558400A89C9A /* Sparkle.framework */; };
 		154488B724EB558C00A89C9A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 154488B524EB558400A89C9A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		155BBD2024E4EBA70049AE62 /* Sayings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155BBD1F24E4EBA70049AE62 /* Sayings.swift */; };
@@ -19,8 +29,8 @@
 		158B03B624D784C8000BFD3A /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B524D784C8000BFD3A /* PreferencesView.swift */; };
 		158B03B824D78851000BFD3A /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B724D78851000BFD3A /* PreferencesWindowController.swift */; };
 		159F235024EAFEB500B8F591 /* SharedFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F234F24EAFEB500B8F591 /* SharedFileList.m */; };
-		15CC6E8F24D64940000F5F43 /* SKWebAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 15CC6E8E24D64940000F5F43 /* SKWebAPI */; };
 		15CC6E9124D64E0C000F5F43 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC6E9024D64E0C000F5F43 /* UserData.swift */; };
+		15D14B6724F6BA340053719E /* SKWebAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 15D14B6624F6BA340053719E /* SKWebAPI */; };
 		15E2DBA724EC4D8A0087CE3D /* NSApplication+AppBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2DBA624EC4D8A0087CE3D /* NSApplication+AppBuild.swift */; };
 		15EF22F024D3A2CD00E275E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */; };
 		15EF22F224D3A2CD00E275E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF22F124D3A2CD00E275E6 /* ContentView.swift */; };
@@ -31,6 +41,16 @@
 		15FEA5C624D4F58F00291CFD /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FEA5C524D4F58F00291CFD /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		152D9EF524F6C17E008E2CFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15EF22E424D3A2CD00E275E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 152D9EE924F6C17E008E2CFF;
+			remoteInfo = ShareToScrapbook;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		1539958824E5FF1B00C493EE /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -38,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				152D9EF724F6C17E008E2CFF /* ShareToScrapbook.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +80,12 @@
 		151DE82624EED4B000CFB720 /* TouchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchBar.h; sourceTree = "<group>"; };
 		151DE82724EEDCF800CFB720 /* EnvironmentKey+NSHostingWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentKey+NSHostingWindow.swift"; sourceTree = "<group>"; };
 		152C9B7A24EED1DE00DC3301 /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
+		152D9EEA24F6C17E008E2CFF /* ShareToScrapbook.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareToScrapbook.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		152D9EEC24F6C17E008E2CFF /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		152D9EEE24F6C17E008E2CFF /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		152D9EF124F6C17E008E2CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
+		152D9EF324F6C17E008E2CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		152D9EF424F6C17E008E2CFF /* ShareToScrapbook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareToScrapbook.entitlements; sourceTree = "<group>"; };
 		154488B524EB558400A89C9A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		155BBD1F24E4EBA70049AE62 /* Sayings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sayings.swift; path = Scrapple/Models/Sayings.swift; sourceTree = SOURCE_ROOT; };
 		1565F13024D78A5400D948DC /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
@@ -84,11 +111,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		152D9EE724F6C17E008E2CFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152D9F1124F6C422008E2CFF /* SKWebAPI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15EF22E924D3A2CD00E275E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15CC6E8F24D64940000F5F43 /* SKWebAPI in Frameworks */,
+				15D14B6724F6BA340053719E /* SKWebAPI in Frameworks */,
 				152C9B7B24EED1DE00DC3301 /* DFRFoundation.framework in Frameworks */,
 				154488B624EB558400A89C9A /* Sparkle.framework in Frameworks */,
 			);
@@ -104,6 +139,18 @@
 				154488B524EB558400A89C9A /* Sparkle.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		152D9EEB24F6C17E008E2CFF /* ShareToScrapbook */ = {
+			isa = PBXGroup;
+			children = (
+				152D9EEC24F6C17E008E2CFF /* icon.icns */,
+				152D9EEE24F6C17E008E2CFF /* ShareViewController.swift */,
+				152D9EF024F6C17E008E2CFF /* ShareViewController.xib */,
+				152D9EF324F6C17E008E2CFF /* Info.plist */,
+				152D9EF424F6C17E008E2CFF /* ShareToScrapbook.entitlements */,
+			);
+			path = ShareToScrapbook;
 			sourceTree = "<group>";
 		};
 		15CC74A524ECE04D0005DCDE /* Support */ = {
@@ -164,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				15EF22EE24D3A2CD00E275E6 /* Scrapple */,
+				152D9EEB24F6C17E008E2CFF /* ShareToScrapbook */,
 				15EF22ED24D3A2CD00E275E6 /* Products */,
 				151DCDE924D647D8005DFD9E /* Frameworks */,
 			);
@@ -173,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				15EF22EC24D3A2CD00E275E6 /* Scrapple.app */,
+				152D9EEA24F6C17E008E2CFF /* ShareToScrapbook.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +253,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		152D9EE924F6C17E008E2CFF /* ShareToScrapbook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 152D9EFA24F6C17E008E2CFF /* Build configuration list for PBXNativeTarget "ShareToScrapbook" */;
+			buildPhases = (
+				152D9EE624F6C17E008E2CFF /* Sources */,
+				152D9EE724F6C17E008E2CFF /* Frameworks */,
+				152D9EE824F6C17E008E2CFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareToScrapbook;
+			packageProductDependencies = (
+				152D9F1024F6C422008E2CFF /* SKWebAPI */,
+			);
+			productName = ShareToScrapbook;
+			productReference = 152D9EEA24F6C17E008E2CFF /* ShareToScrapbook.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		15EF22EB24D3A2CD00E275E6 /* Scrapple */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15EF22FF24D3A2D400E275E6 /* Build configuration list for PBXNativeTarget "Scrapple" */;
@@ -217,10 +286,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				152D9EF624F6C17E008E2CFF /* PBXTargetDependency */,
 			);
 			name = Scrapple;
 			packageProductDependencies = (
-				15CC6E8E24D64940000F5F43 /* SKWebAPI */,
+				15D14B6624F6BA340053719E /* SKWebAPI */,
 			);
 			productName = Scrapple;
 			productReference = 15EF22EC24D3A2CD00E275E6 /* Scrapple.app */;
@@ -232,10 +302,13 @@
 		15EF22E424D3A2CD00E275E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Linus Skucas";
 				TargetAttributes = {
+					152D9EE924F6C17E008E2CFF = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					15EF22EB24D3A2CD00E275E6 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1200;
@@ -252,18 +325,28 @@
 			);
 			mainGroup = 15EF22E324D3A2CD00E275E6;
 			packageReferences = (
-				151DCDE024D6424D005DFD9E /* XCRemoteSwiftPackageReference "SlackKit" */,
+				15D14B6524F6BA340053719E /* XCRemoteSwiftPackageReference "SlackKit" */,
 			);
 			productRefGroup = 15EF22ED24D3A2CD00E275E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				15EF22EB24D3A2CD00E275E6 /* Scrapple */,
+				152D9EE924F6C17E008E2CFF /* ShareToScrapbook */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		152D9EE824F6C17E008E2CFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152D9EF224F6C17E008E2CFF /* ShareViewController.xib in Resources */,
+				152D9EED24F6C17E008E2CFF /* icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15EF22EA24D3A2CD00E275E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +360,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		152D9EE624F6C17E008E2CFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152D9F1524F6C42A008E2CFF /* Sayings.swift in Sources */,
+				152D9F1324F6C42A008E2CFF /* UserData.swift in Sources */,
+				152D9F1424F6C42A008E2CFF /* OAuthToken.swift in Sources */,
+				152D9F1224F6C42A008E2CFF /* Update.swift in Sources */,
+				152D9EEF24F6C17E008E2CFF /* ShareViewController.swift in Sources */,
+				152D9F1724F6C452008E2CFF /* SharedFileList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15EF22E824D3A2CD00E275E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,7 +397,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		152D9EF624F6C17E008E2CFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 152D9EE924F6C17E008E2CFF /* ShareToScrapbook */;
+			targetProxy = 152D9EF524F6C17E008E2CFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		152D9EF024F6C17E008E2CFF /* ShareViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				152D9EF124F6C17E008E2CFF /* Base */,
+			);
+			name = ShareViewController.xib;
+			sourceTree = "<group>";
+		};
 		15EF22F824D3A2D400E275E6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -313,6 +425,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		152D9EF824F6C17E008E2CFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareToScrapbook/ShareToScrapbook.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = P6PV2R9443;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ShareToScrapbook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple.ShareToScrapbook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Extensions/Scrapple-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		152D9EF924F6C17E008E2CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareToScrapbook/ShareToScrapbook.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = P6PV2R9443;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ShareToScrapbook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple.ShareToScrapbook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Extensions/Scrapple-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		15EF22FD24D3A2D400E275E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -431,13 +593,14 @@
 		15EF230024D3A2D400E275E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Scrapple/Scrapple.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -453,7 +616,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -470,13 +633,14 @@
 		15EF230124D3A2D400E275E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Scrapple/Scrapple.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Scrapple/Preview Content\"";
 				DEVELOPMENT_TEAM = P6PV2R9443;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -492,7 +656,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -508,6 +672,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		152D9EFA24F6C17E008E2CFF /* Build configuration list for PBXNativeTarget "ShareToScrapbook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				152D9EF824F6C17E008E2CFF /* Debug */,
+				152D9EF924F6C17E008E2CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		15EF22E724D3A2CD00E275E6 /* Build configuration list for PBXProject "Scrapple" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -529,9 +702,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		151DCDE024D6424D005DFD9E /* XCRemoteSwiftPackageReference "SlackKit" */ = {
+		15D14B6524F6BA340053719E /* XCRemoteSwiftPackageReference "SlackKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pvzig/SlackKit.git";
+			repositoryURL = "https://github.com/pvzig/SlackKit";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.5.1;
@@ -540,9 +713,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		15CC6E8E24D64940000F5F43 /* SKWebAPI */ = {
+		152D9F1024F6C422008E2CFF /* SKWebAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 151DCDE024D6424D005DFD9E /* XCRemoteSwiftPackageReference "SlackKit" */;
+			package = 15D14B6524F6BA340053719E /* XCRemoteSwiftPackageReference "SlackKit" */;
+			productName = SKWebAPI;
+		};
+		15D14B6624F6BA340053719E /* SKWebAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15D14B6524F6BA340053719E /* XCRemoteSwiftPackageReference "SlackKit" */;
 			productName = SKWebAPI;
 		};
 /* End XCSwiftPackageProductDependency section */

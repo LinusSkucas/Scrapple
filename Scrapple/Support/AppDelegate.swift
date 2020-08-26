@@ -16,7 +16,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
     var popover: NSPopover!
     var statusBarItem: NSStatusItem!
-    static var appURL: URL { Bundle.main.bundleURL }
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {

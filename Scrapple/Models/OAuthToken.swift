@@ -11,11 +11,18 @@ import Foundation
 struct OAuthToken {
     static let keychainAccount = "sh.linus.Scrapple"
     
+    #if DEBUG
+    static let teamId = "AZ73FT4DU9"
+    #else
+    static let teamId = "P6PV2R9443"
+    #endif
+    
     var oauthToken: String? {
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrAccount as String: Self.keychainAccount,
                                     kSecMatchLimit as String: kSecMatchLimitOne,
                                     kSecReturnAttributes as String: true,
+                                    kSecAttrAccessGroup as String: "\(Self.teamId).sh.linus.Scrapple.shared",
                                     kSecReturnData as String: true]
         var item: CFTypeRef?
         let status = SecItemCopyMatching(query as CFDictionary, &item)
@@ -36,6 +43,7 @@ struct OAuthToken {
         let password = token.data(using: String.Encoding.utf8)!
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrAccount as String: Self.keychainAccount,
+                                    kSecAttrAccessGroup as String: "\(Self.teamId).sh.linus.Scrapple.shared",
                                     kSecValueData as String: password]
         let status = SecItemAdd(query as CFDictionary, nil)
         guard status == errSecSuccess else { throw KeychainError.unhandledError(status: status)}
