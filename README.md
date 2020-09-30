@@ -22,15 +22,14 @@ Post [Scrapbook](https://scrapbook.hackclub.com) updates right from your menu ba
  - 🚀 Easy sharing: from the menu bar you are able to type in the update, and select the file.
  - 🧨 Auto starting: Starts up when you login
  - :sparkles: Automatic updating: With Sparkle, you'll get a notification.
+ - 🤡 Share files with the share sheet
  - 📚 And of course everything else:
    - ✅ Doesn't take up _any_ system resources
    - :lock: Privacy friendly
    - :apple: Signed and notarized.
 
 Speaking of updates here's the future 🕳:
- - 🤡 Share files with the share sheet and system extensions.!
  - ⏰ Reminder to keep your streak!
- - 🤖 Apple Script/Automator support!
  - ± And a whole ton more....
 
 This app registers with macOS to be run on login, and can be configured in `System Preferences > Users and Groups > [Your Username] > Login Items`.
