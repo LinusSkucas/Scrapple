@@ -13,7 +13,7 @@ struct WelcomeView: View {
     @EnvironmentObject var userData: UserData
     @Environment(\.presentationMode) var presentationMode
     @State var isConnecting = false
-    let oauthURL = URL(string: "https://slack.com/oauth/v2/authorize?client_id=2210535565.1275826279571&scope=&user_scope=files:write,files:read,chat:write,remote_files:share,remote_files:write")!
+    let oauthURL = URL(string: "https://slack.com/oauth/v2/authorize?client_id=2210535565.1275826279571&scope=&user_scope=files:write,files:read,chat:write")!
     
     var body: some View {
         VStack(alignment: .center) {
@@ -32,7 +32,7 @@ struct WelcomeView: View {
                     ProgressIndicator(isAnimating: $isConnecting)
                 }
             }
-            .onReceive(NotificationCenter.default.publisher(for: Notification.Name("GotToken")), perform: {output in
+            .onReceive(NotificationCenter.default.publisher(for: Notification.Name("GotToken")), perform: { output in
                 DispatchQueue.main.async {
                     UserData.shared.runOnLogin = true
                     self.presentationMode.wrappedValue.dismiss()
