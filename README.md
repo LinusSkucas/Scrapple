@@ -13,9 +13,7 @@ Post [Scrapbook](https://scrapbook.hackclub.com) updates right from your menu ba
 
 ### 🍻 Homebrew cask
 
-1. Run `brew tap LinusS1/homebrew-tap`
-2. Run `brew cask install scrapple`
-
+1. Run `brew install --cask LinusS1/taps/scrapple`
 
 ## ✈️ Features
  - 🔌 Quick connecting with Slack: it opens the default broswer and has you sign into slack. Then through deep links, it is able to get it's authorization code.
