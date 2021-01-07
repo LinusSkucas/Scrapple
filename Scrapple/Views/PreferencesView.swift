@@ -12,6 +12,7 @@ struct PreferencesView: View {
     @EnvironmentObject var userData: UserData
     @State var authShow: Bool = false
     @State var quitButtonText = QuitScrappleSaying.status
+    
     var body: some View {
         VStack(alignment: .leading) {
             GroupBox {
@@ -29,6 +30,11 @@ struct PreferencesView: View {
             }
             .frame(height: 100)
 //            .padding(.bottom)
+            Picker(selection: $userData.bigSurIcon, label: Text("Icon Shape"), content: {
+                Text("Real Shape").tag(false)
+                Text("Square thingy").tag(true)
+            })
+            .pickerStyle(SegmentedPickerStyle())
             VStack(alignment: .leading, spacing: 0.0) {
                 Toggle(isOn: self.$userData.notificationOnFinished) {
                     Text("Send notification when finished sending to Scrappy")

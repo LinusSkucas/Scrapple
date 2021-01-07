@@ -19,6 +19,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let imageView = NSImageView(image: NSImage(named: "AppIcon")!)
+        if UserData.shared.bigSurIcon {
+            imageView.image = NSImage(named: "BSAppIcon")!
+        }
+        NSApplication.shared.dockTile.contentView = imageView
+        NSApplication.shared.dockTile.display()
+        
         // Create the SwiftUI view that provides the window contents.
         if UserData.shared.oauthToken?.oauthToken == nil {
             let preferencesView = PreferencesView(authShow: true).environmentObject(UserData.shared)

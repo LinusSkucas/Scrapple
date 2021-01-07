@@ -29,6 +29,18 @@ class UserData: ObservableObject {
     @Published var showTouchBarButton = UserDefaults.standard.bool(forKey: "showTouchBarButton") {
         didSet { UserDefaults.standard.setValue(showTouchBarButton, forKey: "showTouchBarButton") }
     }
+    
+    @Published var bigSurIcon = UserDefaults.standard.bool(forKey: "bigSurIcon") {
+        didSet {
+            UserDefaults.standard.setValue(bigSurIcon, forKey: "bigSurIcon")
+            let imageView = NSImageView(image: NSImage(named: "AppIcon")!)
+            if bigSurIcon {
+                imageView.image = NSImage(named: "BSAppIcon")!
+            }
+            NSApplication.shared.dockTile.contentView = imageView
+            NSApplication.shared.dockTile.display()
+        }
+    }
 
     @Published var shouldRemind = false
     @Published var remindTime = Date()
