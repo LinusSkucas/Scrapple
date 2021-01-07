@@ -9,14 +9,15 @@
 import Cocoa
 import SwiftUI
 import UserNotifications
+import Sparkle
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     var window: NSWindow!
     var popover: NSPopover!
     var statusBarItem: NSStatusItem!
-
+    var statusBarPrefsMenu: NSMenu!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let imageView = NSImageView(image: NSImage(named: "AppIcon")!)
@@ -28,15 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Create the SwiftUI view that provides the window contents.
         if UserData.shared.oauthToken?.oauthToken == nil {
-            let preferencesView = PreferencesView(authShow: true).environmentObject(UserData.shared)
-            UserData.shared.notificationOnFinished = true
-            let controller = PreferencesWindowController(rootView: preferencesView)
-            controller.window?.title = "Preferences"
-            controller.showWindow(nil)
-            controller.window?.becomeFirstResponder()
-            controller.window?.center()
-            controller.window?.makeKeyAndOrderFront(nil)
-            NSApp.activate(ignoringOtherApps: true)
+            showPrefsWindow(shouldPromptForAuth: true)
         }
         let contentView = ContentView().environmentObject(UserData.shared)
 
@@ -49,12 +42,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.squareLength))
         if let button = self.statusBarItem.button {
             button.image = NSImage(named: NSImage.Name("Icon"))
-             button.action = #selector(togglePopover(_:))
+            button.action = #selector(togglePopover(_:))
+            button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
+        
         UNUserNotificationCenter.current().delegate = self
         if (UserData.shared.lastUpdatedVersionBuild != NSApplication.appBuild) || UserData.shared.lastUpdatedVersionBuild == nil {
 //             Preform updates and migration
-            
         }
         UserData.shared.lastUpdatedVersionBuild = NSApplication.appBuild!
         
@@ -67,6 +61,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if UserData.shared.showTouchBarButton {
             DFRElementSetControlStripPresenceForIdentifier(kPandaIdentifier, true)
         }
+        
+        statusBarPrefsMenu = NSMenu(title: "Scrapple")
+        statusBarPrefsMenu.delegate = self
+        statusBarPrefsMenu.addItem(withTitle: "Preferences...", action: #selector(showPrefsWindow), keyEquivalent: ",")
+        statusBarPrefsMenu.addItem(withTitle: "Check for Updates...", action: #selector(checkForUpdates), keyEquivalent: "")
+        statusBarPrefsMenu.addItem(NSMenuItem.separator())
+        statusBarPrefsMenu.addItem(withTitle: "Quit Scrapple", action: #selector(quitScrapple), keyEquivalent: "q")
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {
@@ -102,17 +103,43 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
-    @objc func togglePopover(_ sender: AnyObject?) {
-        if let button = self.statusBarItem.button {
-            if self.popover.isShown {
-                self.popover.performClose(sender)
-            } else {
-                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-                self.popover.contentViewController?.view.window?.becomeKey()
+    @objc func togglePopover(_ sender: NSStatusBarButton) {
+        let event = NSApp.currentEvent!
+        if event.type == NSEvent.EventType.leftMouseUp {
+            if let button = self.statusBarItem.button {
+                if self.popover.isShown {
+                    self.popover.performClose(sender)
+                } else {
+                    self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+                    self.popover.contentViewController?.view.window?.becomeKey()
+                }
             }
+        } else {
+            // show prefs menu
+            statusBarItem.menu = statusBarPrefsMenu
+            statusBarItem.button?.performClick(nil)
         }
     }
-
+    
+    @objc private func showPrefsWindow(shouldPromptForAuth: Bool = false) {
+        let preferencesView = PreferencesView(authShow: shouldPromptForAuth).environmentObject(UserData.shared)
+        UserData.shared.notificationOnFinished = shouldPromptForAuth
+        let controller = PreferencesWindowController(rootView: preferencesView)
+        controller.window?.title = "Preferences"
+        controller.showWindow(nil)
+        controller.window?.becomeFirstResponder()
+        controller.window?.center()
+        controller.window?.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+    
+    @objc private func checkForUpdates() {
+        SUUpdater.shared()?.checkForUpdates(nil)
+    }
+    
+    @objc private func quitScrapple() {
+        NSApp.terminate(nil)
+    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
