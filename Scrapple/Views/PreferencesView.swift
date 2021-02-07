@@ -30,10 +30,10 @@ struct PreferencesView: View {
             }
             .frame(height: 100)
 //            .padding(.bottom)
-            Picker(selection: $userData.bigSurIcon, label: Text("Icon Shape"), content: {
-                Text("Real Shape").tag(false)
-                Text("Square thingy").tag(true)
-            })
+//            Picker(selection: $userData.bigSurIcon, label: Text("Icon Shape"), content: {
+//                Text("Real Shape").tag(false)
+//                Text("Square thingy").tag(true)
+//            })
             .pickerStyle(SegmentedPickerStyle())
             VStack(alignment: .leading, spacing: 0.0) {
                 Toggle(isOn: self.$userData.notificationOnFinished) {
