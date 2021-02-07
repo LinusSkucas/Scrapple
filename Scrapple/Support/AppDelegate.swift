@@ -12,7 +12,7 @@ import UserNotifications
 import Sparkle
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSPopoverDelegate {
 
     var window: NSWindow!
     var popover: NSPopover!
@@ -36,6 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let popover = NSPopover()
         popover.contentSize = NSSize(width: 350, height: 250)
         popover.behavior = .transient
+        popover.delegate = self
         popover.contentViewController = NSHostingController(rootView: contentView)
         self.popover = popover
         
@@ -139,6 +140,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     @objc private func quitScrapple() {
         NSApp.terminate(nil)
+    }
+    
+    func popoverShouldDetach(_ popover: NSPopover) -> Bool {
+        return true
     }
 }
 
