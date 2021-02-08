@@ -7,39 +7,28 @@
 //
 
 import Foundation
+import ServiceManagement
 import SKWebAPI
 import UserNotifications
 
-struct AppBundleURL {
-    static var appURL: URL { Bundle.main.bundleURL }
-}
-
 class UserData: ObservableObject {
-    @Published var runOnLogin: Bool = SharedFileList.sessionLoginItems().containsItem(AppBundleURL.appURL) {
-        didSet { if runOnLogin {
-            SharedFileList.sessionLoginItems().addItem(AppBundleURL.appURL)
-        } else {
-            SharedFileList.sessionLoginItems().removeItem(AppBundleURL.appURL)
-        }}
+    @Published var runOnLogin: Bool = UserDefaults.standard.bool(forKey: "onLogin") {
+        didSet {
+            UserDefaults.standard.setValue(notificationOnFinished, forKey: "notificationOnFinished")
+            if runOnLogin {
+                SMLoginItemSetEnabled(Self.launcherAppId as CFString, true)
+            } else {
+                SMLoginItemSetEnabled(Self.launcherAppId as CFString, false)
+            }
+        }
     }
 
     @Published var notificationOnFinished = UserDefaults.standard.bool(forKey: "notificationOnFinished") {
         didSet { UserDefaults.standard.setValue(notificationOnFinished, forKey: "notificationOnFinished") }
     }
+
     @Published var showTouchBarButton = UserDefaults.standard.bool(forKey: "showTouchBarButton") {
         didSet { UserDefaults.standard.setValue(showTouchBarButton, forKey: "showTouchBarButton") }
-    }
-    
-    @Published var bigSurIcon = UserDefaults.standard.bool(forKey: "bigSurIcon") {
-        didSet {
-            UserDefaults.standard.setValue(bigSurIcon, forKey: "bigSurIcon")
-            let imageView = NSImageView(image: NSImage(named: "AppIcon")!)
-            if bigSurIcon {
-                imageView.image = NSImage(named: "BSAppIcon")!
-            }
-            NSApplication.shared.dockTile.contentView = imageView
-            NSApplication.shared.dockTile.display()
-        }
     }
 
     @Published var shouldRemind = false
@@ -55,6 +44,7 @@ class UserData: ObservableObject {
     }
 
     static var shared = UserData()
+    static let launcherAppId = "sh.linus.Scrapple.LauncherApplication"
 
     func sendNotification(title: String, subtitle: String, time: Date?, interval: DateComponents?) {
         let center = UNUserNotificationCenter.current()

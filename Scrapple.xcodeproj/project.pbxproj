@@ -19,19 +19,23 @@
 		152D9F1324F6C42A008E2CFF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC6E9024D64E0C000F5F43 /* UserData.swift */; };
 		152D9F1424F6C42A008E2CFF /* OAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B324D78017000BFD3A /* OAuthToken.swift */; };
 		152D9F1524F6C42A008E2CFF /* Sayings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155BBD1F24E4EBA70049AE62 /* Sayings.swift */; };
-		152D9F1724F6C452008E2CFF /* SharedFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F234F24EAFEB500B8F591 /* SharedFileList.m */; };
 		155BBD2024E4EBA70049AE62 /* Sayings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155BBD1F24E4EBA70049AE62 /* Sayings.swift */; };
 		1565F13124D78A5400D948DC /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565F13024D78A5400D948DC /* Tooltip.swift */; };
 		1565F13324D7981000D948DC /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565F13224D7981000D948DC /* WelcomeView.swift */; };
 		158B03B424D78017000BFD3A /* OAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B324D78017000BFD3A /* OAuthToken.swift */; };
 		158B03B624D784C8000BFD3A /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B524D784C8000BFD3A /* PreferencesView.swift */; };
 		158B03B824D78851000BFD3A /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B03B724D78851000BFD3A /* PreferencesWindowController.swift */; };
-		159F235024EAFEB500B8F591 /* SharedFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F234F24EAFEB500B8F591 /* SharedFileList.m */; };
 		15C5261225A691C000D61D3D /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C5261125A691C000D61D3D /* Sparkle.framework */; };
 		15C5261325A691E200D61D3D /* Sparkle.framework in Sparkle */ = {isa = PBXBuildFile; fileRef = 15C5261125A691C000D61D3D /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15CC6E9124D64E0C000F5F43 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC6E9024D64E0C000F5F43 /* UserData.swift */; };
 		15D14B6724F6BA340053719E /* SKWebAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 15D14B6624F6BA340053719E /* SKWebAPI */; };
 		15E2DBA724EC4D8A0087CE3D /* NSApplication+AppBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2DBA624EC4D8A0087CE3D /* NSApplication+AppBuild.swift */; };
+		15EBA9E525D0B8B5008323E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBA9E425D0B8B5008323E7 /* AppDelegate.swift */; };
+		15EBA9E925D0B8B8008323E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EBA9E825D0B8B8008323E7 /* Assets.xcassets */; };
+		15EBA9EC25D0B8B8008323E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EBA9EA25D0B8B8008323E7 /* Main.storyboard */; };
+		15EBA9F525D0B97A008323E7 /* LauncherApplication.app in Resources */ = {isa = PBXBuildFile; fileRef = 15EBA9E225D0B8B5008323E7 /* LauncherApplication.app */; };
+		15EBA9FB25D0B997008323E7 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EBA9FA25D0B997008323E7 /* ServiceManagement.framework */; };
+		15EBAA0225D0B9FD008323E7 /* LauncherApplication.app in LauncherApplication Copy Files Phase */ = {isa = PBXBuildFile; fileRef = 15EBA9E225D0B8B5008323E7 /* LauncherApplication.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		15EF22F024D3A2CD00E275E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */; };
 		15EF22F224D3A2CD00E275E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF22F124D3A2CD00E275E6 /* ContentView.swift */; };
 		15EF22F424D3A2D400E275E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EF22F324D3A2D400E275E6 /* Assets.xcassets */; };
@@ -48,6 +52,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 152D9EE924F6C17E008E2CFF;
 			remoteInfo = ShareToScrapbook;
+		};
+		15EBA9F625D0B97A008323E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15EF22E424D3A2CD00E275E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15EBA9E125D0B8B5008323E7;
+			remoteInfo = LauncherApplication;
+		};
+		15EBA9F825D0B986008323E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15EF22E424D3A2CD00E275E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15EBA9E125D0B8B5008323E7;
+			remoteInfo = LauncherApplication;
+		};
+		15EBA9FC25D0B99F008323E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15EF22E424D3A2CD00E275E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15EBA9E125D0B8B5008323E7;
+			remoteInfo = LauncherApplication;
+		};
+		15EBA9FE25D0B9B4008323E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15EF22E424D3A2CD00E275E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15EBA9E125D0B8B5008323E7;
+			remoteInfo = LauncherApplication;
+		};
+		15EBAA0025D0B9F0008323E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15EF22E424D3A2CD00E275E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15EBA9E125D0B8B5008323E7;
+			remoteInfo = LauncherApplication;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -74,6 +113,17 @@
 			name = Sparkle;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15EBA9F425D0B931008323E7 /* LauncherApplication Copy Files Phase */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				15EBAA0225D0B9FD008323E7 /* LauncherApplication.app in LauncherApplication Copy Files Phase */,
+			);
+			name = "LauncherApplication Copy Files Phase";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -93,12 +143,17 @@
 		158B03B324D78017000BFD3A /* OAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthToken.swift; sourceTree = "<group>"; };
 		158B03B524D784C8000BFD3A /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		158B03B724D78851000BFD3A /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
-		159F234D24EAFE6F00B8F591 /* SharedFileList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedFileList.h; sourceTree = "<group>"; };
 		159F234E24EAFEB400B8F591 /* Scrapple-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scrapple-Bridging-Header.h"; sourceTree = "<group>"; };
-		159F234F24EAFEB500B8F591 /* SharedFileList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedFileList.m; sourceTree = "<group>"; };
 		15C5261125A691C000D61D3D /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		15CC6E9024D64E0C000F5F43 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		15E2DBA624EC4D8A0087CE3D /* NSApplication+AppBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSApplication+AppBuild.swift"; sourceTree = "<group>"; };
+		15EBA9E225D0B8B5008323E7 /* LauncherApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LauncherApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15EBA9E425D0B8B5008323E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15EBA9E825D0B8B8008323E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15EBA9EB25D0B8B8008323E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15EBA9ED25D0B8B8008323E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15EBA9EE25D0B8B8008323E7 /* LauncherApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LauncherApplication.entitlements; sourceTree = "<group>"; };
+		15EBA9FA25D0B997008323E7 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		15EF22EC24D3A2CD00E275E6 /* Scrapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15EF22F124D3A2CD00E275E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,11 +175,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15EBA9DF25D0B8B5008323E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15EF22E924D3A2CD00E275E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				15D14B6724F6BA340053719E /* SKWebAPI in Frameworks */,
+				15EBA9FB25D0B997008323E7 /* ServiceManagement.framework in Frameworks */,
 				15C5261225A691C000D61D3D /* Sparkle.framework in Frameworks */,
 				152C9B7B24EED1DE00DC3301 /* DFRFoundation.framework in Frameworks */,
 			);
@@ -136,6 +199,7 @@
 		151DCDE924D647D8005DFD9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15EBA9FA25D0B997008323E7 /* ServiceManagement.framework */,
 				15C5261125A691C000D61D3D /* Sparkle.framework */,
 				152C9B7A24EED1DE00DC3301 /* DFRFoundation.framework */,
 			);
@@ -158,8 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				15EF22EF24D3A2CD00E275E6 /* AppDelegate.swift */,
-				159F234D24EAFE6F00B8F591 /* SharedFileList.h */,
-				159F234F24EAFEB500B8F591 /* SharedFileList.m */,
 				151DE82624EED4B000CFB720 /* TouchBar.h */,
 			);
 			path = Support;
@@ -208,11 +270,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		15EBA9E325D0B8B5008323E7 /* LauncherApplication */ = {
+			isa = PBXGroup;
+			children = (
+				15EBA9E425D0B8B5008323E7 /* AppDelegate.swift */,
+				15EBA9E825D0B8B8008323E7 /* Assets.xcassets */,
+				15EBA9EA25D0B8B8008323E7 /* Main.storyboard */,
+				15EBA9ED25D0B8B8008323E7 /* Info.plist */,
+				15EBA9EE25D0B8B8008323E7 /* LauncherApplication.entitlements */,
+			);
+			path = LauncherApplication;
+			sourceTree = "<group>";
+		};
 		15EF22E324D3A2CD00E275E6 = {
 			isa = PBXGroup;
 			children = (
 				15EF22EE24D3A2CD00E275E6 /* Scrapple */,
 				152D9EEB24F6C17E008E2CFF /* ShareToScrapbook */,
+				15EBA9E325D0B8B5008323E7 /* LauncherApplication */,
 				15EF22ED24D3A2CD00E275E6 /* Products */,
 				151DCDE924D647D8005DFD9E /* Frameworks */,
 			);
@@ -223,6 +298,7 @@
 			children = (
 				15EF22EC24D3A2CD00E275E6 /* Scrapple.app */,
 				152D9EEA24F6C17E008E2CFF /* ShareToScrapbook.appex */,
+				15EBA9E225D0B8B5008323E7 /* LauncherApplication.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,6 +350,23 @@
 			productReference = 152D9EEA24F6C17E008E2CFF /* ShareToScrapbook.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		15EBA9E125D0B8B5008323E7 /* LauncherApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15EBA9EF25D0B8B8008323E7 /* Build configuration list for PBXNativeTarget "LauncherApplication" */;
+			buildPhases = (
+				15EBA9DE25D0B8B5008323E7 /* Sources */,
+				15EBA9DF25D0B8B5008323E7 /* Frameworks */,
+				15EBA9E025D0B8B5008323E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LauncherApplication;
+			productName = LauncherApplication;
+			productReference = 15EBA9E225D0B8B5008323E7 /* LauncherApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
 		15EF22EB24D3A2CD00E275E6 /* Scrapple */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15EF22FF24D3A2D400E275E6 /* Build configuration list for PBXNativeTarget "Scrapple" */;
@@ -283,11 +376,17 @@
 				15EF22EA24D3A2CD00E275E6 /* Resources */,
 				1539958824E5FF1B00C493EE /* Embed App Extensions */,
 				154488B324EB528800A89C9A /* Sparkle */,
+				15EBA9F425D0B931008323E7 /* LauncherApplication Copy Files Phase */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				152D9EF624F6C17E008E2CFF /* PBXTargetDependency */,
+				15EBA9F725D0B97A008323E7 /* PBXTargetDependency */,
+				15EBA9F925D0B986008323E7 /* PBXTargetDependency */,
+				15EBA9FD25D0B99F008323E7 /* PBXTargetDependency */,
+				15EBA9FF25D0B9B4008323E7 /* PBXTargetDependency */,
+				15EBAA0125D0B9F0008323E7 /* PBXTargetDependency */,
 			);
 			name = Scrapple;
 			packageProductDependencies = (
@@ -303,12 +402,15 @@
 		15EF22E424D3A2CD00E275E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Linus Skucas";
 				TargetAttributes = {
 					152D9EE924F6C17E008E2CFF = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					15EBA9E125D0B8B5008323E7 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 					15EF22EB24D3A2CD00E275E6 = {
 						CreatedOnToolsVersion = 11.5;
@@ -334,6 +436,7 @@
 			targets = (
 				15EF22EB24D3A2CD00E275E6 /* Scrapple */,
 				152D9EE924F6C17E008E2CFF /* ShareToScrapbook */,
+				15EBA9E125D0B8B5008323E7 /* LauncherApplication */,
 			);
 		};
 /* End PBXProject section */
@@ -348,10 +451,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15EBA9E025D0B8B5008323E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15EBA9E925D0B8B8008323E7 /* Assets.xcassets in Resources */,
+				15EBA9EC25D0B8B8008323E7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15EF22EA24D3A2CD00E275E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15EBA9F525D0B97A008323E7 /* LauncherApplication.app in Resources */,
 				15EF22FA24D3A2D400E275E6 /* Main.storyboard in Resources */,
 				15EF22F724D3A2D400E275E6 /* Preview Assets.xcassets in Resources */,
 				15EF22F424D3A2D400E275E6 /* Assets.xcassets in Resources */,
@@ -370,7 +483,14 @@
 				152D9F1424F6C42A008E2CFF /* OAuthToken.swift in Sources */,
 				152D9F1224F6C42A008E2CFF /* Update.swift in Sources */,
 				152D9EEF24F6C17E008E2CFF /* ShareViewController.swift in Sources */,
-				152D9F1724F6C452008E2CFF /* SharedFileList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15EBA9DE25D0B8B5008323E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15EBA9E525D0B8B5008323E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +499,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				158B03B424D78017000BFD3A /* OAuthToken.swift in Sources */,
-				159F235024EAFEB500B8F591 /* SharedFileList.m in Sources */,
 				158B03B624D784C8000BFD3A /* PreferencesView.swift in Sources */,
 				15CC6E9124D64E0C000F5F43 /* UserData.swift in Sources */,
 				15FEA5C624D4F58F00291CFD /* ActivityIndicator.swift in Sources */,
@@ -404,6 +523,31 @@
 			target = 152D9EE924F6C17E008E2CFF /* ShareToScrapbook */;
 			targetProxy = 152D9EF524F6C17E008E2CFF /* PBXContainerItemProxy */;
 		};
+		15EBA9F725D0B97A008323E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15EBA9E125D0B8B5008323E7 /* LauncherApplication */;
+			targetProxy = 15EBA9F625D0B97A008323E7 /* PBXContainerItemProxy */;
+		};
+		15EBA9F925D0B986008323E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15EBA9E125D0B8B5008323E7 /* LauncherApplication */;
+			targetProxy = 15EBA9F825D0B986008323E7 /* PBXContainerItemProxy */;
+		};
+		15EBA9FD25D0B99F008323E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15EBA9E125D0B8B5008323E7 /* LauncherApplication */;
+			targetProxy = 15EBA9FC25D0B99F008323E7 /* PBXContainerItemProxy */;
+		};
+		15EBA9FF25D0B9B4008323E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15EBA9E125D0B8B5008323E7 /* LauncherApplication */;
+			targetProxy = 15EBA9FE25D0B9B4008323E7 /* PBXContainerItemProxy */;
+		};
+		15EBAA0125D0B9F0008323E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15EBA9E125D0B8B5008323E7 /* LauncherApplication */;
+			targetProxy = 15EBAA0025D0B9F0008323E7 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -413,6 +557,14 @@
 				152D9EF124F6C17E008E2CFF /* Base */,
 			);
 			name = ShareViewController.xib;
+			sourceTree = "<group>";
+		};
+		15EBA9EA25D0B8B8008323E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15EBA9EB25D0B8B8008323E7 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		15EF22F824D3A2D400E275E6 /* Main.storyboard */ = {
@@ -472,6 +624,52 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Scrapple/Extensions/Scrapple-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		15EBA9F025D0B8B8008323E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LauncherApplication/LauncherApplication.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P6PV2R9443;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = LauncherApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple.LauncherApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		15EBA9F125D0B8B8008323E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LauncherApplication/LauncherApplication.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P6PV2R9443;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = LauncherApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.linus.Scrapple.LauncherApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -678,6 +876,15 @@
 			buildConfigurations = (
 				152D9EF824F6C17E008E2CFF /* Debug */,
 				152D9EF924F6C17E008E2CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15EBA9EF25D0B8B8008323E7 /* Build configuration list for PBXNativeTarget "LauncherApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15EBA9F025D0B8B8008323E7 /* Debug */,
+				15EBA9F125D0B8B8008323E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
