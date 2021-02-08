@@ -114,10 +114,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSPopoverDel
                     popover.contentViewController?.view.window?.becomeKey()
                 }
             }
-        } else {
+        } else if event.type == NSEvent.EventType.rightMouseUp {
             // show prefs menu
             statusBarItem.menu = statusBarPrefsMenu
             statusBarItem.button?.performClick(nil)
+            statusBarItem.menu = nil
         }
     }
 
